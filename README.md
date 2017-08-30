@@ -1,6 +1,6 @@
-# Sample AEM project template
+# Guava Package
 
-This is a project template for AEM-based applications. It is intended as a best-practice set of examples as well as a potential starting point to develop your own functionality.
+This is an AEM package wrapper for the Guava library used in our projects.
 
 ## Modules
 
@@ -21,10 +21,6 @@ If you have a running AEM instance you can build and package the whole project a
 Or to deploy it to a publish instance, run
 
     mvn clean install -PautoInstallPackagePublish
-    
-Or to deploy only the bundle to the author, run
-
-    mvn clean install -PautoInstallBundle
 
 
 ## Maven settings
