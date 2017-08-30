@@ -23,7 +23,6 @@
     <description>GuavaPackage</description>
 
     <modules>
-        <module>core</module>
         <module>ui.apps</module>
     </modules>
 
