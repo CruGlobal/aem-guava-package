@@ -3,6 +3,4 @@
     <filter root="/apps/guava">
         <exclude pattern="/apps/guava/install" />
     </filter>
-    <filter root="/apps/sling" />
-    <filter root="/etc/designs/guava"/>
 </workspaceFilter>

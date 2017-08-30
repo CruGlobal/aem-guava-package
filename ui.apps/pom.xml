@@ -30,7 +30,7 @@
     <!-- ====================================================================== -->
     <!-- P R O J E C T  D E S C R I P T I O N                                   -->
     <!-- ====================================================================== -->
-    <artifactId>guava-package.ui.apps</artifactId>
+    <artifactId>guava-cq-package</artifactId>
     <packaging>content-package</packaging>
     <name>GuavaPackage - UI apps</name>
     <description>UI apps package for GuavaPackage</description>
@@ -118,7 +118,7 @@
                     <filterSource>${basedir}/META-INF/vault/filter.xml</filterSource>
                     <verbose>true</verbose>
                     <failOnError>true</failOnError>
-                    <group>GuavaPackage Content Package</group>
+                    <group>Cru</group>
                     <embeddeds>
                         <embedded>
                             <groupId>Cru</groupId>
@@ -155,6 +155,8 @@
                         </executions>
                         <configuration>
                             <targetURL>http://${aem.host}:${aem.port}/crx/packmgr/service.jsp</targetURL>
+                            <userId>${vault.user}</userId>
+                            <password>${vault.password}</password>
                             <failOnError>true</failOnError>
                             <failOnMissingEmbed>true</failOnMissingEmbed>
                         </configuration>
@@ -182,6 +184,8 @@
                         </executions>
                         <configuration>
                             <targetURL>http://${aem.publish.host}:${aem.publish.port}/crx/packmgr/service.jsp</targetURL>
+                            <userId>${vault.publish.user}</userId>
+                            <password>${vault.publish.password}</password>
                             <failOnError>true</failOnError>
                             <failOnMissingEmbed>true</failOnMissingEmbed>
                         </configuration>
@@ -198,12 +202,13 @@
         <dependency>
             <groupId>Cru</groupId>
             <artifactId>guava-package.core</artifactId>
-            <version>22.0</version>
+            <version>${project.version}</version>
         </dependency>
 
         <dependency>
             <groupId>com.adobe.aem</groupId>
-            <artifactId>aem-api</artifactId>
+            <artifactId>uber-jar</artifactId>
+            <classifier>apis</classifier>
         </dependency>
 
         <dependency>
@@ -212,8 +217,8 @@
         </dependency>
 
         <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>servlet-api</artifactId>
+            <groupId>org.apache.tomcat</groupId>
+            <artifactId>tomcat-servlet-api</artifactId>
         </dependency>
 
         <dependency>
