@@ -24,6 +24,7 @@
 
     <modules>
         <module>ui.apps</module>
+        <module>core</module>
     </modules>
 
     <properties>
@@ -384,6 +385,13 @@
     <!-- ====================================================================== -->
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>org.cru</groupId>
+                <artifactId>aem-bom</artifactId>
+                <version>1.0</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
             <dependency>
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>

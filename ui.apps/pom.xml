@@ -121,8 +121,8 @@
                     <group>Cru</group>
                     <embeddeds>
                         <embedded>
-                            <groupId>com.google.guava</groupId>
-                            <artifactId>guava</artifactId>
+                            <groupId>org.cru</groupId>
+                            <artifactId>guava.core</artifactId>
                             <target>/apps/guava/install</target>
                         </embedded>
                     </embeddeds>
@@ -200,8 +200,9 @@
     <!-- ====================================================================== -->
     <dependencies>
         <dependency>
-            <groupId>com.google.guava</groupId>
-            <artifactId>guava</artifactId>
+            <groupId>org.cru</groupId>
+            <artifactId>guava.core</artifactId>
+            <version>${project.version}</version>
         </dependency>
     </dependencies>
 </project>

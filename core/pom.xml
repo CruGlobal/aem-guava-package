@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.cru</groupId>
+        <artifactId>guava-package</artifactId>
+        <version>22.0</version>
+    </parent>
+
+    <artifactId>guava.core</artifactId>
+    <version>22.0</version>
+    <name>AEM Guava - Core</name>
+    <description>Core bundle for AEM Guava</description>
+    <packaging>bundle</packaging>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <extensions>true</extensions>
+                <configuration>
+                    <instructions>
+                        <Bundle-SymbolicName>AEM-Guava-Package</Bundle-SymbolicName>
+                        <Embed-Transitive>true</Embed-Transitive>
+                        <Embed-Dependency>guava</Embed-Dependency>
+                        <Export-Package>
+                            com.google.common.annotations,
+                            com.google.common.base,
+                            com.google.common.cache,
+                            com.google.common.collect,
+                            com.google.common.escape,
+                            com.google.common.eventbus,
+                            com.google.common.hash,
+                            com.google.common.html,
+                            com.google.common.io,
+                            com.google.common.math,
+                            com.google.common.net,
+                            com.google.common.primitives,
+                            com.google.common.reflect,
+                            com.google.common.util.concurrent,
+                            com.google.common.xml
+                        </Export-Package>
+                        <Import-Package>
+                            !com.google.common.base,
+                            !com.google.common.collect,
+                            !com.google.common.math,
+                            !com.google.common.primitives,
+                            !com.google.errorprone.annotations,
+                            !com.google.errorprone.annotations.concurrent,
+                            sun.misc;resolution:=optional,
+                            *
+                        </Import-Package>
+                    </instructions>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <!-- ====================================================================== -->
+    <!-- D E P E N D E N C I E S                                                -->
+    <!-- ====================================================================== -->
+    <dependencies>
+        <!-- OSGi Dependencies -->
+        <dependency>
+            <groupId>org.apache.felix</groupId>
+            <artifactId>org.apache.felix.scr</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.felix</groupId>
+            <artifactId>org.apache.felix.scr.annotations</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>biz.aQute</groupId>
+            <artifactId>bndlib</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.osgi</groupId>
+            <artifactId>org.osgi.core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.osgi</groupId>
+            <artifactId>org.osgi.compendium</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+        </dependency>
+    </dependencies>
+    
+</project>
