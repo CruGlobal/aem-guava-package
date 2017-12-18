@@ -25,6 +25,7 @@
                 <configuration>
                     <instructions>
                         <Bundle-SymbolicName>AEM-Guava-Package</Bundle-SymbolicName>
+                        <Bundle-Description>This bundle simply wraps Guava ${project.version}</Bundle-Description>
                         <Embed-Transitive>true</Embed-Transitive>
                         <Embed-Dependency>guava</Embed-Dependency>
                         <Export-Package>
