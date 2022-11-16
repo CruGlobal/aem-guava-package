@@ -7,11 +7,11 @@
     <parent>
         <groupId>org.cru</groupId>
         <artifactId>guava-package</artifactId>
-        <version>22.0</version>
+        <version>3.0.0-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
 
     <artifactId>guava.core</artifactId>
-    <version>22.0</version>
     <name>AEM Guava - Core</name>
     <description>Core bundle for AEM Guava</description>
     <packaging>bundle</packaging>
@@ -25,7 +25,7 @@
                 <configuration>
                     <instructions>
                         <Bundle-SymbolicName>AEM-Guava-Package</Bundle-SymbolicName>
-                        <Bundle-Description>This bundle simply wraps Guava ${project.version}</Bundle-Description>
+                        <Bundle-Description>This bundle simply wraps Guava ${guava.version}</Bundle-Description>
                         <Embed-Transitive>true</Embed-Transitive>
                         <Embed-Dependency>guava</Embed-Dependency>
                         <Export-Package>
@@ -90,6 +90,7 @@
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
+            <version>${guava.version}</version>
         </dependency>
     </dependencies>
     

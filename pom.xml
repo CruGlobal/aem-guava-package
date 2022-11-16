@@ -19,7 +19,7 @@
     <groupId>org.cru</groupId>
     <artifactId>guava-package</artifactId>
     <packaging>pom</packaging>
-    <version>22.0</version>
+    <version>3.0.0-SNAPSHOT</version>
     <description>GuavaPackage</description>
 
     <modules>
@@ -37,6 +37,8 @@
         <aem.publish.port>4503</aem.publish.port>
         <vault.publish.user>admin</vault.publish.user>
         <vault.publish.password>admin</vault.publish.password>
+
+        <guava.version>22.0</guava.version>
     </properties>
     <build>
         <plugins>
@@ -395,7 +397,7 @@
             <dependency>
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>
-                <version>${project.version}</version>
+                <version>${guava.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
