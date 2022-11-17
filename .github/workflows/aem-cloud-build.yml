@@ -2,9 +2,9 @@ name: Java CI with Maven Build AEM repository
 
 on:
   push:
-    branches: [ main, develop ]
+    branches: [ main, develop, add-missing-submodules ]
   pull_request:
-    branches: [ main, develop ]
+    branches: [ main, develop, add-missing-submodules ]
 
 jobs:
   aem-build:
