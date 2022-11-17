@@ -84,7 +84,7 @@
         <dependency>
             <groupId>org.cru</groupId>
             <artifactId>guava.core</artifactId>
-            <version>${guava.version}</version>
+            <version>${project.version}</version>
         </dependency>
 
         <dependency>
